@@ -24,7 +24,8 @@ const Counter = (props) => {
 
   const updateCounter = (action) => {
     if (action === "add") {
-      setCounter(counter + 1);
+      // setCounter(counter + 1);
+      setCounter((prevCounter) => prevCounter + step);
     } else if (action === "reset") {
       setCounter(props.counterInitValue);
     } else {
